@@ -1,6 +1,5 @@
-﻿#include <string>
+#include <string>
 #include <iostream>
-
 using namespace std;
 
 int decToBin(int num);
@@ -36,3 +35,15 @@ int decToBin(int num)
 	wyn = reverseInt(wyn);
 	return wyn;
 }
+int binToDec(string bin)
+{
+	int d = 0;
+	int n = bin.size();
+	for (int i = 0; i < n; i++)
+	{
+		d *= 2;
+		d += bin[i] - '0';
+	}
+	return d;
+}
+
