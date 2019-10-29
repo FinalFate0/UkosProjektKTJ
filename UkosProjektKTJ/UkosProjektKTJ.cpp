@@ -3,6 +3,7 @@
 using namespace std;
 
 int decToBin(int num);
+int binToDec(string bin);
 int reverseInt(int num);
 
 int main()
