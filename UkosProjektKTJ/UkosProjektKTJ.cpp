@@ -2,21 +2,20 @@
 #include <iostream>
 using namespace std;
 
-int decToBin(int num);
+string decToBin(int num);
 int binToDec(string bin);
-int reverseInt(int num);
 
 int main()
 {
 
-	int choice, inputOne, result;
+	int choice, inputOne;
 	string inputTwo, quit;
 
 	while (true) {
 		cout << "What do you want to do?" << endl << endl << "1 - Convert decimal to binary" << endl << "2 - Convert binary to decimal"<<endl;
 		cin >> choice;
 		if (choice == 1) {
-
+			string result;
 			cout << "Enter your number"<<endl;
 			cin >> inputOne;
 			result = decToBin(inputOne);
@@ -25,7 +24,7 @@ int main()
 
 		}
 		else if (choice == 2) {
-
+			int result;
 			cout << "Enter your number"<<endl;
 			cin >> inputTwo;
 			result = binToDec(inputTwo);
@@ -41,28 +40,15 @@ int main()
 	}
 }
 	
-
-int reverseInt(int num)
+string decToBin(int num)
 {
-	int revnum = 0;
-	while (num > 0)
-	{
-		revnum = revnum * 10 + num % 10;
-		num = num / 10;
-	}
-	return revnum;
-}
-int decToBin(int num)
-{
-	int wyn = 0;
+	string wyn="";
 	int i = 10;
 	while (num != 0)
 	{
-		wyn = wyn * 10;
-		wyn = wyn + num % 2;
+		wyn = (char)('0'+num % 2)+wyn;
 		num = num / 2;
 	}
-	wyn = reverseInt(wyn);
 	return wyn;
 }
 int binToDec(string bin)
