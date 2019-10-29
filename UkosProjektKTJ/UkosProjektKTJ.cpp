@@ -11,9 +11,8 @@ int main()
 
 	int choice, inputOne, result;
 	string inputTwo, quit;
-	bool continueProgram = true;
 
-	while (continueProgram == true) {
+	while (true) {
 		cout << "What do you want to do?" << endl << endl << "1 - Convert decimal to binary" << endl << "2 - Convert binary to decimal"<<endl;
 		cin >> choice;
 		if (choice == 1) {
