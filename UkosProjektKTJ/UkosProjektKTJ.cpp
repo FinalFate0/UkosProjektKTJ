@@ -9,9 +9,39 @@ int reverseInt(int num);
 int main()
 {
 
-	
-	
+	int choice, inputOne, result;
+	string inputTwo, quit;
+	bool continueProgram = true;
+
+	while (continueProgram == true) {
+		cout << "What do you want to do?" << endl << endl << "1 - Convert decimal to binary" << endl << "2 - Convert binary to decimal"<<endl;
+		cin >> choice;
+		if (choice == 1) {
+
+			cout << "Enter your number"<<endl;
+			cin >> inputOne;
+			result = decToBin(inputOne);
+			cout << "Your result is " << result << "."<<endl;
+
+
+		}
+		else if (choice == 2) {
+
+			cout << "Enter your number"<<endl;
+			cin >> inputTwo;
+			result = binToDec(inputTwo);
+			cout << "Your result is " << result << "."<<endl;
+		}
+
+		cout << "Do you want to continue? (y/n)"<<endl;
+		cin >> quit;
+		if (quit == "n") {
+			break;
+		}
+
+	}
 }
+	
 
 int reverseInt(int num)
 {
